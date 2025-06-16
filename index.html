@@ -1,27 +1,67 @@
-<button id="copyButton">Copy Link</button>
-<input type="text" id="linkInput" value="https://roblox.com" readonly>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blank Background</title>
+    <title>Welcome to My Website</title>
     <style>
         body {
-            background-color: white; /* Blank background */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-color: blue; /* Blue background */
             margin: 0;
+            text-align: center;
+        }
+        h1, p {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: white;
         }
         h1 {
-            color: red;
-            font-size: 50px;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        iframe {
+            display: none; /* Hide embedded players */
         }
     </style>
 </head>
 <body>
-    <h1>SHU BEN</h1>
+
+    <h1>Welcome to my website!</h1>
+
+    <button onclick="window.location.href='https://apejuceshubensitoinc.website3.me/'">Go to Website</button>
+
+    <button onclick="document.getElementById('soundFrame1').style.display='block'">remix 1</button>
+    <iframe id="soundFrame1" width="110" height="200" src="https://www.myinstants.com/instant/wide-trump-eating-the-cats-95769/embed/" frameborder="0" scrolling="no"></iframe>
+
+    <button onclick="document.getElementById('soundFrame2').style.display='block'">remix 2</button>
+    <iframe id="soundFrame2" width="110" height="200" src="https://www.myinstants.com/instant/wide-putin-full-34040/embed/" frameborder="0" scrolling="no"></iframe>
+
+    <button onclick="document.getElementById('bloxyFrame').style.display='block'">If you wanna chill click here!</button>
+    <iframe id="bloxyFrame" width="110" height="200" src="https://www.myinstants.com/instant/bloxy-cola-67977/embed/" frameborder="0" scrolling="no"></iframe>
+
+    <p>Ok if you wanna chill. Sit down and drink some cola.</p> <!-- Chill message added at the bottom -->
+
 </body>
 </html>
