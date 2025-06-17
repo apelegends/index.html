@@ -65,3 +65,29 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show IP :</title>
+</head>
+<body>
+    <button id="ipButton">Show IP : </button>
+    <p id="ipDisplay"></p>
+    <audio id="audioPlayer" src="oiia.mp3"></audio>
+
+    <script>
+        document.getElementById("ipButton").addEventListener("click", function() {
+            fetch("https://api.ipify.org?format=json")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("ipDisplay").innerText = "Your IP: " + data.ip;
+                    document.getElementById("audioPlayer").play();
+                })
+                .catch(error => console.error("Error fetching IP:", error));
+        });
+    </script>
+</body>
+</html>
